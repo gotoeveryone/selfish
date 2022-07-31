@@ -1,0 +1,11 @@
+name: "EditorConfig Checker"
+on: push
+jobs:
+  editorconfig:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: editorconfig-checker/action-editorconfig-checker@main
+        with:
+          version: 2.6.0
+      - run: editorconfig-checker
